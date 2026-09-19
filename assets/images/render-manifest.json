@@ -1,0 +1,45 @@
+{
+  "source": "system_rev7_perforated_score.scad",
+  "source_sha256": "52bff07c70fd33cc4247b62ed5b2c33dbb560772f9617580dee63a37e3ac0839",
+  "openscad": "OpenSCAD version 2021.01",
+  "method": "OpenCSG preview or CGAL render per image flags; source dispatch replaced only for documentation scenes",
+  "parameters": "source defaults; score flags false; fn=72",
+  "images": {
+    "system-cad.png": {
+      "sha256": "ad17a078929c86ab201303e7078d86b2da53b440d96704cf01608b527f6e1d31",
+      "camera": "0,0,12,63,0,32,260",
+      "scene": "color([0.26,0.48,0.64]) panel_part();\ntranslate([0,0,panel_thickness+10]) color([0.92,0.66,0.30])\n    difference() { silicone_array(); place_units() ball_snap_post(); }\n",
+      "flags": [
+        "--preview",
+        "--csglimit=1000000",
+        "--projection=o",
+        "--viewall",
+        "--autocenter"
+      ]
+    },
+    "mold-exploded-cad.png": {
+      "sha256": "9f60899f0dc0c633d5133c333fe3710ea4bfeed72001941da4f2a039cdf79563",
+      "camera": "0,0,13,69,0,33,350",
+      "scene": "color([0.32,0.52,0.69]) translate([0,0,unit_height+show_exploded_gap]) top_lid_assembly();\ncolor([0.79,0.80,0.77]) center_piece_assembly();\ncolor([0.45,0.63,0.75]) translate([0,0,-show_exploded_gap]) bottom_lid_assembly();\n",
+      "flags": [
+        "--render",
+        "--csglimit=1000000",
+        "--projection=o",
+        "--viewall",
+        "--autocenter"
+      ]
+    },
+    "socket-detail-cad.png": {
+      "sha256": "13b67e61b7926daa1d49e2bc0b306129ea08acb58d1f369a42567c56bdb408a4",
+      "camera": "0,0,5,68,0,12,110",
+      "scene": "color([0.92,0.66,0.30]) translate([16,0,0]) difference() {\n    silicone_unit(); ball_snap_post();\n    translate([-30,-30,-1]) cube([60,30,25]);\n}\ncolor([0.26,0.48,0.64]) translate([-12,0,0]) union() {\n    translate([-7,-7,-2]) cube([14,14,2]); ball_snap_post();\n}\n",
+      "flags": [
+        "--preview",
+        "--csglimit=1000000",
+        "--projection=o",
+        "--viewall",
+        "--autocenter"
+      ]
+    }
+  }
+}

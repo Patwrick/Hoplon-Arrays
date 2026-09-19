@@ -1,0 +1,18 @@
+# Original, unverified reference package: preserve locally; never bundle by default.
+/LSR_quote_package_v1/
+# Root STLs predate the matched generated set. Preserve originals locally.
+/*.stl
+
+# Generated scratch/output must be kept separate from explicitly reviewed exports.
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+/dist/
+/build/
+/release-review/
+
+# Ignore rules are not a history purge or a substitute for reviewing staged files.

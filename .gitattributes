@@ -1,0 +1,11 @@
+# Preserve exact CAD bytes: provenance manifests record the source SHA-256.
+# Do not run normalization or rewrite the existing mechanical source.
+*.scad -text
+
+# Binary release assets must never receive line-ending conversion.
+*.stl binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.zip binary

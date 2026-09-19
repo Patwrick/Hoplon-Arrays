@@ -1,0 +1,593 @@
+{
+  "source": "system_rev7_perforated_score.scad",
+  "source_sha256": "52bff07c70fd33cc4247b62ed5b2c33dbb560772f9617580dee63a37e3ac0839",
+  "units": "mm",
+  "openscad_version": "OpenSCAD version 2021.01",
+  "configuration": "Source defaults; only tool_mode overridden.",
+  "source_assignments": {
+    "$fn": "72",
+    "EPS": "0.001",
+    "tool_mode": "\"silicone_positive\"",
+    "show_exploded_gap": "18.0",
+    "rows": "4",
+    "cols": "4",
+    "top_size": "22.0",
+    "top_corner_radius": "6.0",
+    "top_thickness": "3.0",
+    "top_bevel_inset": "0.0",
+    "unit_height": "16.0",
+    "edge_gap_x": "1.40",
+    "edge_gap_y": "1.40",
+    "pitch_x": "top_size + edge_gap_x",
+    "pitch_y": "top_size + edge_gap_y",
+    "field_margin_x": "1.2",
+    "field_margin_y": "1.2",
+    "field_corner_radius": "5.0",
+    "column_d": "9.0",
+    "fin_count": "8",
+    "fin_thickness": "1.2",
+    "fin_neck_extra": "0.10",
+    "fin_attach_bot_frac": "0.60",
+    "fin_attach_top_frac": "0.80",
+    "fin_root_overlap": "0.35",
+    "fin_end_overlap": "0.20",
+    "fin_steps": "40",
+    "mold_wall": "0.0",
+    "clamp_flange": "18.0",
+    "lid_thickness": "8.0",
+    "mold_edge_bevel": "2.0",
+    "cavity_face_relief": "0.08",
+    "fit_clearance": "0.20",
+    "bleed_channel_w": "3.0",
+    "bleed_channel_depth": "3.0",
+    "score_enable": "false",
+    "score_top_enable": "false",
+    "score_bottom_enable": "false",
+    "score_offset": "1.2",
+    "score_line_width": "0.0",
+    "score_pocket_depth": "0.60",
+    "score_web_thickness": "0.08",
+    "score_tooth_height": "max(score_pocket_depth - score_web_thickness, EPS)",
+    "score_fit_clearance": "0.20",
+    "score_dot_enable": "true",
+    "score_dot_d": "0.80",
+    "score_dot_pitch": "4.00",
+    "score_dot_count": "18",
+    "bolt_hole_enable": "true",
+    "bolt_hole_d": "6.7",
+    "bolt_edge_margin": "7.5",
+    "snap_stem_d": "1.6",
+    "snap_stem_h": "6",
+    "snap_ball_d": "5.0",
+    "snap_ball_sink": "0.4",
+    "snap_fin_enable": "true",
+    "snap_fin_count": "4",
+    "snap_fin_thickness": "0.6",
+    "snap_fin_outer_d": "4.6",
+    "snap_fin_stem_overlap": "0.12",
+    "snap_fin_base_overlap": "0.10",
+    "snap_fin_top_clearance": "0.10",
+    "snap_fin_tip_taper": "0.00",
+    "panel_thickness": "2.0",
+    "field_w": "(cols - 1) * pitch_x + top_size + 2 * field_margin_x",
+    "field_d": "(rows - 1) * pitch_y + top_size + 2 * field_margin_y",
+    "tool_w": "field_w + 2 * mold_wall + 2 * clamp_flange",
+    "tool_d": "field_d + 2 * mold_wall + 2 * clamp_flange",
+    "pad_top_face_size": "max(top_size - 2 * top_bevel_inset, 0.1)",
+    "pad_top_face_r": "max(top_corner_radius - 0.55 * top_bevel_inset, 0.25)",
+    "snap_post_drop": "snap_stem_h - snap_ball_sink + snap_ball_d / 2",
+    "bolt_x": "tool_w / 2 - bolt_edge_margin - bolt_hole_d / 2",
+    "bolt_y": "tool_d / 2 - bolt_edge_margin - bolt_hole_d / 2"
+  },
+  "validation_scope": "CGAL export plus mesh topology, winding, finite coordinates, area and volume. No general self-intersection, slicer, print or physical-fit test.",
+  "artifacts": [
+    {
+      "file": "bottom_lid.stl",
+      "sha256": "a5dfa1f97d93bef65f951b53323231d1983d6636e1ac396576ac6494c87b0fcb",
+      "triangles": 1804,
+      "vertices": 896,
+      "bounds_mm": [
+        [
+          -65.30000305175781,
+          -65.30000305175781,
+          0.0
+        ],
+        [
+          65.30000305175781,
+          65.30000305175781,
+          11.0
+        ]
+      ],
+      "dimensions_mm": [
+        130.60000610351562,
+        130.60000610351562,
+        11.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_mm3": 136214.41158813488,
+      "components": [
+        {
+          "triangles": 1804,
+          "volume_mm3": 136214.41158813488,
+          "bounds_mm": [
+            [
+              -65.30000305175781,
+              -65.30000305175781,
+              0.0
+            ],
+            [
+              65.30000305175781,
+              65.30000305175781,
+              11.0
+            ]
+          ]
+        }
+      ],
+      "limits": "No general self-intersection, material, slicer, print, or physical-fit test.",
+      "mode": "bottom_lid",
+      "command_from_repository_root": [
+        "openscad",
+        "--export-format",
+        "binstl",
+        "--hardwarnings",
+        "-o",
+        "<output>/bottom_lid.stl",
+        "-D",
+        "tool_mode=\"bottom_lid\"",
+        "system_rev7_perforated_score.scad"
+      ],
+      "expected_components": 1,
+      "mesh_checks_passed": true,
+      "role": "Printed mold component.",
+      "original_export_basename": "bottom_lid.stl"
+    },
+    {
+      "file": "top_lid.stl",
+      "sha256": "8078dd7175e3a908d9e7356be555caf5c083bfe780b1f7cbbf260c98a3b5fb27",
+      "triangles": 81596,
+      "vertices": 40792,
+      "bounds_mm": [
+        [
+          -65.30000305175781,
+          -65.30000305175781,
+          0.002379989717155695
+        ],
+        [
+          65.30000305175781,
+          65.30000305175781,
+          16.100000381469727
+        ]
+      ],
+      "dimensions_mm": [
+        130.60000610351562,
+        130.60000610351562,
+        16.09762039175257
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_mm3": 137577.74938869535,
+      "components": [
+        {
+          "triangles": 81596,
+          "volume_mm3": 137577.74938869535,
+          "bounds_mm": [
+            [
+              -65.30000305175781,
+              -65.30000305175781,
+              0.002379989717155695
+            ],
+            [
+              65.30000305175781,
+              65.30000305175781,
+              16.100000381469727
+            ]
+          ]
+        }
+      ],
+      "limits": "No general self-intersection, material, slicer, print, or physical-fit test.",
+      "mode": "top_lid",
+      "command_from_repository_root": [
+        "openscad",
+        "--export-format",
+        "binstl",
+        "--hardwarnings",
+        "-o",
+        "<output>/top_lid.stl",
+        "-D",
+        "tool_mode=\"top_lid\"",
+        "system_rev7_perforated_score.scad"
+      ],
+      "expected_components": 1,
+      "mesh_checks_passed": true,
+      "role": "Printed mold component.",
+      "original_export_basename": "top_lid.stl"
+    },
+    {
+      "file": "panel.stl",
+      "sha256": "225435a985582f60af80c406499a2d4e5073da3119af29adaead82a425793121",
+      "triangles": 80092,
+      "vertices": 40048,
+      "bounds_mm": [
+        [
+          -47.29998779296875,
+          -47.29998779296875,
+          0.0
+        ],
+        [
+          47.29998779296875,
+          47.29998779296875,
+          10.097620010375977
+        ]
+      ],
+      "dimensions_mm": [
+        94.5999755859375,
+        94.5999755859375,
+        10.097620010375977
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_mm3": 19218.52898274125,
+      "components": [
+        {
+          "triangles": 80092,
+          "volume_mm3": 19218.52898274125,
+          "bounds_mm": [
+            [
+              -47.29998779296875,
+              -47.29998779296875,
+              0.0
+            ],
+            [
+              47.29998779296875,
+              47.29998779296875,
+              10.097620010375977
+            ]
+          ]
+        }
+      ],
+      "limits": "No general self-intersection, material, slicer, print, or physical-fit test.",
+      "mode": "panel",
+      "command_from_repository_root": [
+        "openscad",
+        "--export-format",
+        "binstl",
+        "--hardwarnings",
+        "-o",
+        "<output>/panel.stl",
+        "-D",
+        "tool_mode=\"panel\"",
+        "system_rev7_perforated_score.scad"
+      ],
+      "expected_components": 1,
+      "mesh_checks_passed": true,
+      "role": "Printed panel.",
+      "original_export_basename": "panel.stl"
+    },
+    {
+      "file": "silicone_positive_reference.stl",
+      "sha256": "c8ed093a3d29ad9d5338ee4e66bb6a3dab8a825b985e4add9f778647a1c62910",
+      "triangles": 33216,
+      "vertices": 16640,
+      "bounds_mm": [
+        [
+          -46.099998474121094,
+          -46.099998474121094,
+          0.0
+        ],
+        [
+          46.099998474121094,
+          46.099998474121094,
+          16.0
+        ]
+      ],
+      "dimensions_mm": [
+        92.19999694824219,
+        92.19999694824219,
+        16.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_mm3": 38220.457021407456,
+      "components": [
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7787355415203,
+          "bounds_mm": [
+            [
+              -22.700000762939453,
+              -22.700000762939453,
+              0.0
+            ],
+            [
+              -0.699999988079071,
+              -0.699999988079071,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7787354971556,
+          "bounds_mm": [
+            [
+              0.699999988079071,
+              -22.700000762939453,
+              0.0
+            ],
+            [
+              22.700000762939453,
+              -0.699999988079071,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778734540154,
+          "bounds_mm": [
+            [
+              -22.700000762939453,
+              0.699999988079071,
+              0.0
+            ],
+            [
+              -0.699999988079071,
+              22.700000762939453,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778734495791,
+          "bounds_mm": [
+            [
+              0.699999988079071,
+              0.699999988079071,
+              0.0
+            ],
+            [
+              22.700000762939453,
+              22.700000762939453,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7785660320783,
+          "bounds_mm": [
+            [
+              -46.099998474121094,
+              0.699999988079071,
+              0.0
+            ],
+            [
+              -24.100000381469727,
+              22.700000762939453,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7785660282234,
+          "bounds_mm": [
+            [
+              24.100000381469727,
+              0.699999988079071,
+              0.0
+            ],
+            [
+              46.099998474121094,
+              22.700000762939453,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7785648340523,
+          "bounds_mm": [
+            [
+              -46.099998474121094,
+              -22.700000762939453,
+              0.0
+            ],
+            [
+              -24.100000381469727,
+              -0.699999988079071,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778563653863,
+          "bounds_mm": [
+            [
+              -22.700000762939453,
+              -46.099998474121094,
+              0.0
+            ],
+            [
+              -0.699999988079071,
+              -24.100000381469727,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778563634195,
+          "bounds_mm": [
+            [
+              24.100000381469727,
+              -22.700000762939453,
+              0.0
+            ],
+            [
+              46.099998474121094,
+              -0.699999988079071,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7785636078256,
+          "bounds_mm": [
+            [
+              0.699999988079071,
+              -46.099998474121094,
+              0.0
+            ],
+            [
+              22.700000762939453,
+              -24.100000381469727,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778563565601,
+          "bounds_mm": [
+            [
+              -22.700000762939453,
+              24.100000381469727,
+              0.0
+            ],
+            [
+              -0.699999988079071,
+              46.099998474121094,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778563519564,
+          "bounds_mm": [
+            [
+              0.699999988079071,
+              24.100000381469727,
+              0.0
+            ],
+            [
+              22.700000762939453,
+              46.099998474121094,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.778391790828,
+          "bounds_mm": [
+            [
+              -46.099998474121094,
+              -46.099998474121094,
+              0.0
+            ],
+            [
+              -24.100000381469727,
+              -24.100000381469727,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.77839161441,
+          "bounds_mm": [
+            [
+              24.100000381469727,
+              -46.099998474121094,
+              0.0
+            ],
+            [
+              46.099998474121094,
+              -24.100000381469727,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7783916143057,
+          "bounds_mm": [
+            [
+              24.100000381469727,
+              24.100000381469727,
+              0.0
+            ],
+            [
+              46.099998474121094,
+              46.099998474121094,
+              16.0
+            ]
+          ]
+        },
+        {
+          "triangles": 2076,
+          "volume_mm3": 2388.7783914378874,
+          "bounds_mm": [
+            [
+              -46.099998474121094,
+              24.100000381469727,
+              0.0
+            ],
+            [
+              -24.100000381469727,
+              46.099998474121094,
+              16.0
+            ]
+          ]
+        }
+      ],
+      "limits": "No general self-intersection, material, slicer, print, or physical-fit test.",
+      "mode": "silicone_positive",
+      "command_from_repository_root": [
+        "openscad",
+        "--export-format",
+        "binstl",
+        "--hardwarnings",
+        "-o",
+        "<output>/silicone_positive_reference.stl",
+        "-D",
+        "tool_mode=\"silicone_positive\"",
+        "system_rev7_perforated_score.scad"
+      ],
+      "expected_components": 16,
+      "mesh_checks_passed": true,
+      "role": "Positive visual reference; lacks molded socket.",
+      "original_export_basename": "silicone_positive.stl"
+    }
+  ],
+  "audit_date": "2026-09-19",
+  "withheld_candidates": [
+    {
+      "mode": "center_piece",
+      "reason": "24 exact zero-area triangles at the upper cavity-face relief. Kept outside public exports. CGAL reported Simple=yes; closed consistent mesh topology is insufficient for this quality gate.",
+      "dimensions_mm": [
+        130.60000610351562,
+        130.60000610351562,
+        16.0
+      ],
+      "degenerate_triangles": 24,
+      "source_geometry_changed": false
+    }
+  ],
+  "command_note": "Portable reproduction commands: installed executable location and private output folder are replaced by openscad and <output>. Flags and mode overrides are the actual ones used.",
+  "copy_note": "silicone_positive.stl was copied byte-for-byte to silicone_positive_reference.stl for its public reference-only label."
+}
